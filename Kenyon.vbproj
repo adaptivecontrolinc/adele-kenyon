@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E71D3879-D490-4FEE-A24E-FAB75AFD6886}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>Kenyon</AssemblyName>
+    <MyType>Windows</MyType>
+    <OptionStrict>On</OptionStrict>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <OptionInfer>On</OptionInfer>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DefineConstants>DEBUG=1</DefineConstants>
+    <NoWarn>42030,42104,42108,42109,42353,42354,42355</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <Optimize>false</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DefineConstants>
+    </DefineConstants>
+    <NoWarn>42030,42104,42108,42109,42353,42354,42355</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="MimicControls" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Globalization.CultureInfo" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\0Common\PumpSpeedControl.vb" />
+    <Compile Include="Source\0Common\FanSpeedControl.vb" />
+    <Compile Include="Source\0Common\Reporting\PrintControlsDocument.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\0Common\Setpoint.vb" />
+    <Compile Include="Source\0Common\User.vb" />
+    <Compile Include="Source\Commands\Frame Functions\CV.vb" />
+    <Compile Include="Source\Commands\Frame Functions\OV.vb" />
+    <Compile Include="Source\0Common\Settings\Settings.vb" />
+    <Compile Include="Source\Commands\Frame Functions\ST.vb" />
+    <Compile Include="Source\Commands\Frame Functions\TLR.vb" />
+    <Compile Include="Source\Control Code\ControlCode.Customize.vb" />
+    <Compile Include="Source\Control Code\ControlCode.Database.vb" />
+    <Compile Include="Source\Control Code\ControlCode.DrawScreen.vb" />
+    <Compile Include="Source\Control Code\Ovens\OvenCirculationFans.vb" />
+    <Compile Include="Source\Control Code\Ovens\Ovens.vb" />
+    <Compile Include="Source\Control Code\Ovens\OvenTemperatures.vb" />
+    <Compile Include="Source\Defaults.vb" />
+    <Compile Include="Source\Globals.vb" />
+    <Compile Include="Source\System\Flasher.vb" />
+    <Compile Include="Source\User Interface\0Common\Keyboards\KeyNoFocus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\0Common\Keyboards\KeysNumericClear.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\0Common\LabelSetpoint.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\0Common\LabelValue.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\0Common\LabelValueUnits.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control Keyboard\ControlButtonNoFocus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control Keyboard\ControlKeyboard.Designer.vb">
+      <DependentUpon>ControlKeyboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control Keyboard\ControlKeyboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control SetpointAdjust\SetpointAdjustThin.Designer.vb">
+      <DependentUpon>SetpointAdjustThin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control SetpointAdjust\SetpointAdjustThin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Print\FormPrint.Designer.vb">
+      <DependentUpon>FormPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Print\FormPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Qwerty\FormQwerty.Designer.vb">
+      <DependentUpon>FormQwerty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Qwerty\FormQwerty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Widths\FormMimicWidths.Designer.vb">
+      <DependentUpon>FormMimicWidths.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Widths\FormMimicWidths.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\Utilities\Utilities.Calibrate.vb" />
+    <Compile Include="Source\Utilities\Utilities.Draw.vb" />
+    <Compile Include="Source\Utilities\Utilities.Sql.vb" />
+    <Compile Include="Source\Utilities\Utilities.UserXml.vb" />
+    <Compile Include="Source\Commands\Oven Functions\AT.vb" />
+    <Compile Include="Source\Commands\Oven Functions\FS.vb" />
+    <Compile Include="Source\Commands\Batch Functions\LS.vb" />
+    <Compile Include="Source\Commands\Frame Functions\OP.vb" />
+    <Compile Include="Source\Commands\Frame Functions\WD.vb" />
+    <Compile Include="Source\Commands\Oven Functions\FD.vb" />
+    <Compile Include="Source\Commands\Oven Functions\ES.vb" />
+    <Compile Include="Source\Commands\Frame Functions\PR.vb" />
+    <Compile Include="Source\Commands\Frame Functions\SV.vb" />
+    <Compile Include="Source\Commands\Frame Functions\TC.vb" />
+    <Compile Include="Source\Commands\Frame Functions\WS.vb" />
+    <Compile Include="Source\Control Code\Alarms.vb" />
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="Source\System\Control.vb" />
+    <Compile Include="Source\Control Code\ControlCode.Commands.vb" />
+    <Compile Include="Source\Control Code\ControlCode.Variables.vb" />
+    <Compile Include="Source\Control Code\Parameters.vb" />
+    <Compile Include="Source\Control Code\ControlCode.vb" />
+    <Compile Include="Source\System\Enums.vb" />
+    <Compile Include="Source\IO\IO.vb" />
+    <Compile Include="Source\0Common\DancerPressController.vb" />
+    <Compile Include="Source\0Common\GasFlowmeter.vb" />
+    <Compile Include="Source\0Common\GasUsage.vb" />
+    <Compile Include="Source\IO\HoneyWell.vb" />
+    <Compile Include="Source\System\Memo.vb" />
+    <Compile Include="Source\0Common\Interfaces.vb" />
+    <Compile Include="Source\0Common\FrameProgram.vb" />
+    <Compile Include="Source\IO\MicroSpeed.vb" />
+    <Compile Include="Source\IO\MicroSpeed196.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Source\0Common\PadController.vb" />
+    <Compile Include="Source\0Common\SpeedController.vb" />
+    <Compile Include="Source\0Common\TenterController.vb" />
+    <Compile Include="Source\User Interface\Controls\Control Configuration\ControlConfiguration.Designer.vb">
+      <DependentUpon>ControlConfiguration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control Configuration\ControlConfiguration.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control Keypad With Backspace\UserControlKeypadBksp.Designer.vb">
+      <DependentUpon>UserControlKeypadBksp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control Keypad With Backspace\UserControlKeypadBksp.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Add Job\FormAddJob.Designer.vb">
+      <DependentUpon>FormAddJob.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Add Job\FormAddJob.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control SetpointAdjust\SetpointAdjust.Designer.vb">
+      <DependentUpon>SetpointAdjust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control SetpointAdjust\SetpointAdjust.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Keypad\FormKeypad.Designer.vb">
+      <DependentUpon>FormKeypad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Keypad\FormKeypad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Mimic\Mimic.Designer.vb">
+      <DependentUpon>Mimic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Mimic\Mimic.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Mimic\MimicControls.vb" />
+    <Compile Include="Source\System\Modbus.vb" />
+    <Compile Include="Source\System\Ports.vb" />
+    <Compile Include="Source\System\Support.vb" />
+    <Compile Include="Source\User Interface\Forms\Form Password\FormPassword.Designer.vb">
+      <DependentUpon>FormPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Forms\Form Password\FormPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control Keypad\UserControlKeypad.Designer.vb">
+      <DependentUpon>UserControlKeypad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\Control Keypad\UserControlKeypad.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\Utilities\Utilities.Conversions.vb" />
+    <Compile Include="Source\Utilities\Utilities.Log.vb" />
+    <Compile Include="Source\User Interface\Controls\WorkList\ControlWorkList.Designer.vb">
+      <DependentUpon>ControlWorkList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\WorkList\ControlWorkList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\WorkList\ControlWorkListCurrent.Designer.vb">
+      <DependentUpon>ControlWorkListCurrent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\WorkList\ControlWorkListCurrent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\WorkList\ControlWorkListScheduled.Designer.vb">
+      <DependentUpon>ControlWorkListScheduled.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Source\User Interface\Controls\WorkList\ControlWorkListScheduled.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Source\0Common\WidthController.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Source\User Interface\Controls\Control Configuration\ControlConfiguration.resx">
+      <DependentUpon>ControlConfiguration.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Controls\Control SetpointAdjust\SetpointAdjust.resx">
+      <DependentUpon>SetpointAdjust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Controls\Control SetpointAdjust\SetpointAdjustThin.resx">
+      <DependentUpon>SetpointAdjustThin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Forms\Form Print\FormPrint.resx">
+      <DependentUpon>FormPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Forms\Form Qwerty\FormQwerty.resx">
+      <DependentUpon>FormQwerty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Forms\Form Widths\FormMimicWidths.resx">
+      <DependentUpon>FormMimicWidths.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Mimic\Mimic.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Mimic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Forms\Form Password\FormPassword.resx">
+      <DependentUpon>FormPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Controls\Control Keypad\UserControlKeypad.resx">
+      <DependentUpon>UserControlKeypad.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Source\User Interface\Controls\Control Keypad With Backspace\UserControlKeypadBksp.resx">
+      <DependentUpon>UserControlKeypadBksp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Forms\Form Add Job\FormAddJob.resx">
+      <DependentUpon>FormAddJob.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\WorkList16x16.png" />
+    <None Include="Resources\Properties16x16.png" />
+    <None Include="Resources\Gridlines16x16.png" />
+    <None Include="Resources\FramePNG.png" />
+    <None Include="Resources\AdeleFrameMimic.png" />
+    <Content Include="Resources\Exit16x16.png" />
+    <Content Include="Source\User Interface\Icons\Decrease.png" />
+    <Content Include="Source\User Interface\Icons\Decrease10.png" />
+    <Content Include="Source\User Interface\Icons\Fall.png" />
+    <Content Include="Source\User Interface\Icons\Increase.png" />
+    <Content Include="Source\User Interface\Icons\Increase10.png" />
+    <Content Include="Source\User Interface\Icons\Increase10_.png" />
+    <Content Include="Source\User Interface\Icons\Raise.png" />
+    <Content Include="Source\User Interface\Icons\TempProbe.png" />
+    <Content Include="Resources\Mimic302D.png" />
+    <None Include="Resources\Increase.png" />
+    <None Include="Resources\Decrease.png" />
+    <None Include="Resources\TempProbe.png" />
+    <None Include="Resources\Raise.png" />
+    <None Include="Resources\Fall.png" />
+    <EmbeddedResource Include="Source\User Interface\Forms\Form Keypad\FormKeypad.resx">
+      <DependentUpon>FormKeypad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Blocked16x16.png" />
+    <EmbeddedResource Include="Resources\Cancel16x16.png" />
+    <EmbeddedResource Include="Resources\Chemicals16x16.png" />
+    <EmbeddedResource Include="Resources\Close16x16.png" />
+    <EmbeddedResource Include="Resources\DeleteBlack16x16.png" />
+    <EmbeddedResource Include="Resources\DeleteRed16x16.png" />
+    <EmbeddedResource Include="Resources\DestinationsLarge16x16.png" />
+    <EmbeddedResource Include="Resources\DestinationsSmall16x16.png" />
+    <EmbeddedResource Include="Resources\DoubleLeftArrow16x16.png" />
+    <EmbeddedResource Include="Resources\DoubleRightArrow16x16.png" />
+    <EmbeddedResource Include="Resources\Edit16x16.png" />
+    <EmbeddedResource Include="Resources\FormBackgroundLight.bmp" />
+    <EmbeddedResource Include="Resources\LeftArrow16x16.png" />
+    <EmbeddedResource Include="Resources\Mimic16x16.png" />
+    <EmbeddedResource Include="Resources\mimic302f.bmp" />
+    <EmbeddedResource Include="Resources\Mimic302F.png" />
+    <EmbeddedResource Include="Resources\Mimic302W.png" />
+    <EmbeddedResource Include="Resources\MoveFirst16x16.png" />
+    <EmbeddedResource Include="Resources\MoveLast16x16.png" />
+    <EmbeddedResource Include="Resources\MoveNext16x16.png" />
+    <EmbeddedResource Include="Resources\MovePrevious16x16.png" />
+    <EmbeddedResource Include="Resources\NewDocument16x16.png" />
+    <EmbeddedResource Include="Resources\OverviewContainerClose.bmp" />
+    <EmbeddedResource Include="Resources\Pause16x16.png" />
+    <EmbeddedResource Include="Resources\Play16x16.png" />
+    <EmbeddedResource Include="Resources\Products16x16.png" />
+    <EmbeddedResource Include="Resources\Refresh16x16.png" />
+    <EmbeddedResource Include="Resources\RightArrow16x16.png" />
+    <EmbeddedResource Include="Resources\Run16x16.png" />
+    <EmbeddedResource Include="Resources\Save16x16.png" />
+    <EmbeddedResource Include="Resources\Stop16x16.png" />
+    <EmbeddedResource Include="Resources\ValveHorizontalWithFill.png" />
+    <EmbeddedResource Include="Resources\ValveHorizontalWithFillOn.png" />
+    <EmbeddedResource Include="Resources\ValveVerticalWithFill.png" />
+    <EmbeddedResource Include="Resources\ValveVerticalWithFillOn.png" />
+    <EmbeddedResource Include="Source\User Interface\Controls\WorkList\ControlWorkList.resx">
+      <DependentUpon>ControlWorkList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Controls\WorkList\ControlWorkListCurrent.resx">
+      <DependentUpon>ControlWorkListCurrent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Source\User Interface\Controls\WorkList\ControlWorkListScheduled.resx">
+      <DependentUpon>ControlWorkListScheduled.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="0AdeleKnits\" />
+    <Folder Include="Source\Commands\Batcher Functions\" />
+    <Folder Include="Source\Commands\Pad Functions\" />
+    <Folder Include="Source\Pleva\" />
+    <Folder Include="Source\User Interface\Pleva\" />
+    <Folder Include="Source\User Interface\UtilitiesView\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
